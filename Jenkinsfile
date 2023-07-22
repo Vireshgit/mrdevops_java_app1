@@ -1,3 +1,5 @@
+@Library('my-shared-library') _
+
 pipeline{
 
    agent any
@@ -8,7 +10,8 @@ pipeline{
 
          steps{
             
-           git branch: 'main', url: 'https://github.com/Vireshgit/mrdevops_java_app1.git'
+           branch: 'main', 
+           url: 'https://github.com/Vireshgit/mrdevops_java_app1.git'
 
         }      
      }
