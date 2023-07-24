@@ -46,6 +46,17 @@ pipeline{
 
          }
      }
+      stage('static code check: sonarqube'){
+          when {
+           environment name: 'action', value: 'delete'
+         }
+
+         steps{
+         def SonarqubeCredentialsId = 'sonar-api'
+         staticCodeAnalysis(SonarqubeCredentialsId)
+
+         }
+     }
    }
 }
 
