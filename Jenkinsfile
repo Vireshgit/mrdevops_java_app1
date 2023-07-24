@@ -30,7 +30,7 @@ pipeline{
 
          steps{
 
-         mvnTest()
+         mvnIntegrationTest()
 
          }
      }
